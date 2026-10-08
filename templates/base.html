@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Cửa hàng sách{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav>
+  <h1>Cửa hàng sách</h1>
+  <a href="/books" class="{{ 'on' if request.path == '/books' }}">Danh sách sách</a>
+  <a href="/add" class="{{ 'on' if request.path == '/add' }}">Thêm sách</a>
+</nav>
+<main>
+  {% with tin = get_flashed_messages(with_categories=true) %}
+    {% for loai, noi_dung in tin %}
+      <div class="flash {{ loai }}">{{ noi_dung }}</div>
+    {% endfor %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

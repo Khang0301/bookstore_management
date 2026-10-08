@@ -1,2 +1,9 @@
-# File lưu trữ dữ liệu
-mssv,ho_ten,lop,diem
+﻿ma_sach,ten_sach,tac_gia,gia,so_luong
+S001,Nhà Giả Kim,Paulo Coelho,79000,15
+S002,Đắc Nhân Tâm,Dale Carnegie,86000,20
+S003,Dế Mèn Phiêu Lưu Ký,Tô Hoài,55000,30
+S004,Sapiens: Lược Sử Loài Người,Yuval Noah Harari,189000,8
+S005,Tuổi Trẻ Đáng Giá Bao Nhiêu,Rosie Nguyễn,72000,12
+S006,Mắt Biếc,Nguyễn Nhật Ánh,95000,0
+S007,Truyện Kiều,Nguyễn Du,0,5
+S008,Cho Tôi Xin Một Vé Đi Tuổi Thơ,Nguyễn Nhật Ánh,68000,18

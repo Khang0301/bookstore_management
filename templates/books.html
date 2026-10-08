@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Danh sách sách{% endblock %}
+{% block content %}
+<div class="top"><h2>Danh sách sách</h2><a class="btn" href="/add">Thêm sách</a></div>
+<div class="card wrap">
+  <table>
+    <tr><th>Mã sách</th><th>Tên sách</th><th>Tác giả</th><th>Giá</th><th>Số lượng</th><th>Thao tác</th></tr>
+    {% for s in ds %}
+    <tr>
+      <td>{{ s.ma_sach }}</td><td>{{ s.ten_sach }}</td><td>{{ s.tac_gia }}</td>
+      <td>{{ s.gia | tien }}</td><td>{{ s.so_luong }}</td>
+      <td class="act">
+        <a class="btn-sua" href="/edit/{{ s.ma_sach }}">Sửa</a>
+        <form method="post" action="/delete/{{ s.ma_sach }}" data-ten="{{ s.ten_sach }}" onsubmit="return xacNhanXoa(this)">
+          <button class="btn-xoa" type="submit">Xóa</button>
+        </form>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="6">Chưa có sách nào.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

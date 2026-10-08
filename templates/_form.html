@@ -1,0 +1,16 @@
+<div class="card">
+<form method="post" class="form">
+  <div><label>Mã sách *</label>
+    <input name="ma_sach" value="{{ sach.get('ma_sach', '') }}" placeholder="Ví dụ: S009" {{ 'readonly' if khoa_ma }}></div>
+  <div><label>Tên sách *</label>
+    <input name="ten_sach" value="{{ sach.get('ten_sach', '') }}" placeholder="Nhà Giả Kim"></div>
+  <div><label>Tác giả *</label>
+    <input name="tac_gia" value="{{ sach.get('tac_gia', '') }}" placeholder="Paulo Coelho"></div>
+  <div><label>Giá (đồng) *</label>
+    <input name="gia" value="{{ sach.get('gia', '') }}" placeholder="79000"></div>
+  <div><label>Số lượng *</label>
+    <input name="so_luong" value="{{ sach.get('so_luong', '') }}" placeholder="15"></div>
+  <div class="full"><button class="btn" type="submit">Lưu sách</button>
+    <a class="btn ghost" href="/books">Hủy</a></div>
+</form>
+</div>
